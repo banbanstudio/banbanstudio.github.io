@@ -110,6 +110,17 @@ footer{text-align:center;padding:26px 0 40px;opacity:.65;font-size:14px}
 .board .nums div{flex:1 1 150px;background:var(--cream);border-radius:14px;padding:10px 6px}
 .board b{display:block;font-size:34px;line-height:1.1;font-variant-numeric:tabular-nums}.board small{font-size:14px;opacity:.75}
 .board .big b{color:var(--or);font-size:42px}
+
+.club{margin:30px 0 0}.club .g3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.cbox{background:#fff;border:3px solid var(--ink);border-radius:20px;padding:16px;box-shadow:0 6px 0 var(--ink)}
+.cbox h3{margin:0 0 6px;font-size:21px}.cbox p{margin:0 0 10px;font-size:15px}
+.sbtn{display:flex;flex-wrap:wrap;gap:8px}.sbtn a,.sbtn button{flex:1 1 120px;font:inherit;font-size:15px;color:#fff;text-decoration:none;text-align:center;border:0;border-radius:999px;padding:8px 10px;cursor:pointer}
+.wall{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;margin-top:14px}
+.rv{background:#fff;border:3px solid var(--ink);border-radius:18px;padding:12px 14px;position:relative}
+.rv q{display:block;font-size:16px;quotes:"「" "」"}.rv small{display:block;margin-top:6px;opacity:.7;font-size:13px}
+.rv.empty{grid-column:1/-1;border-style:dashed;text-align:center;opacity:.8}
+.cnote{font-size:13px;opacity:.7;margin-top:10px}
+@media(max-width:820px){.club .g3{grid-template-columns:1fr}}
 </style><script>window.goatcounter={path:function(){return location.pathname||"/"}}</script><script data-goatcounter="https://chengyu.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>window.gcEvent=function(p){try{if(location.hostname.indexOf("github.io")<0)return;var f=function(){window.goatcounter&&window.goatcounter.count&&window.goatcounter.count({path:p,title:p,event:true});};window.goatcounter&&window.goatcounter.count?f():setTimeout(f,1500);}catch(e){}};
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.href,s=/pubu\.com\.tw/.test(h)?'Pubu':/kobo\.com/.test(h)?'Kobo':/amazon\./.test(h)?'Kindle':/chengyu-game/.test(h)?'遊戲':'';if(!s)return;if(s==='遊戲'){gcEvent('官網/點遊戲');return}gcEvent('點購書/'+s+'/官網');gcEvent('點購書/全部');gcEvent('點購書/官網');},true);</script>
@@ -119,7 +130,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
  <video class="bgart dvid" autoplay muted loop playsinline preload="auto" poster="img/hero_poster.jpg" aria-label="斑斑和喵喵鎮的朋友們在山坡上歡迎你"><source src="img/hero_loop.mp4" type="video/mp4"></video>
  <img class="bgart mimg" src="img/hero_town_m.jpg" alt="斑斑和喵喵鎮的朋友們在山坡上歡迎你">
  <nav class="top w2"><a class="logo" href="./"><img src="banban.jpg" alt="斑斑">斑斑工作室</a>
-  <div class="navb"><a href="#board">👀 人次</a><a href="#news">📣 快報</a><a href="#play">🎈 玩什麼</a><a href="#friends">🐾 認識朋友</a><a href="#parents">👨‍👩‍👧 給爸媽</a></div></nav>
+  <div class="navb"><a href="#board">👀 人次</a><a href="#news">📣 快報</a><a href="#play">🎈 玩什麼</a><a href="#friends">🐾 認識朋友</a><a href="#club">💬 朋友圈</a><a href="#parents">👨‍👩‍👧 給爸媽</a></div></nav>
  <div class="htext">
   <h1 class="hello"><span>歡</span><span>迎</span><span>光</span><span>臨</span><br>斑斑的世界！</h1>
   <div class="lead">這裡有好笑的<b>成語漫畫</b>、好玩的<b>闖關遊戲</b>，還有一整個<b>喵喵鎮</b>的貓咪朋友在等你！</div>
@@ -198,6 +209,24 @@ document.getElementById('bdHome').textContent=f(a[3]||0);document.getElementById
  <img class="pimg" src="img/parents.jpg" alt="親子一起看斑斑的漫畫">
 </div></section>
 
+
+<section id="club" class="club">
+ <h2 class="ttl">斑斑<em>朋友圈</em></h2>
+ <p class="sub">加斑斑當朋友、揪朋友一起玩，也來說說你們家的讀書心得！</p>
+ <div class="g3">
+  <div class="cbox"><h3>🐾 加斑斑當朋友</h3><p>追蹤斑斑，每週一三五有新的一分鐘成語短片。</p>
+   <div class="sbtn"><a href="https://www.youtube.com/@banbanstudio_tw?sub_confirmation=1" target="_blank" rel="noopener" style="background:#e33b2e">▶️ YouTube</a><a href="https://www.instagram.com/banbanstudio.tw/" target="_blank" rel="noopener" style="background:#c13584">📷 Instagram</a><a href="https://www.threads.com/@banbanstudio.tw" target="_blank" rel="noopener" style="background:#3a2e26">🧵 Threads</a><a href="https://www.tiktok.com/@banbanstudio.tw" target="_blank" rel="noopener" style="background:#1fb5bd">🎵 TikTok</a></div>
+   <p class="cnote">社群平台要滿 13 歲才能註冊，小朋友請和爸爸媽媽一起看喔。</p></div>
+  <div class="cbox"><h3>🎈 揪朋友一起玩</h3><p>把斑斑分享給同學的爸媽、班級群組，大家一起比賽闖關！</p>
+   <div class="sbtn"><a id="shLine" target="_blank" rel="noopener" style="background:#06c755">LINE 分享</a><a id="shFb" target="_blank" rel="noopener" style="background:#1877f2">Facebook</a><button id="shCopy" style="background:var(--or)">🔗 複製連結</button></div>
+   <p class="cnote" id="shMsg">分享的是斑斑官網連結，不會帶出你的任何個人資料。</p></div>
+  <div class="cbox"><h3>💬 分享使用心得</h3><p>孩子最喜歡哪個成語？玩到第幾關？寫給斑斑，我們會挑出來放在下面的心得牆。</p>
+   <div class="sbtn"><a id="rvMail" href="mailto:banbanstudio.tw@gmail.com?subject=%E6%96%91%E6%96%91%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB&body=%E6%9A%B1%E7%A8%B1%EF%BC%88%E6%9C%83%E5%88%8A%E7%99%BB%E5%9C%A8%E7%B6%B2%E7%AB%99%EF%BC%8C%E8%AB%8B%E4%B8%8D%E8%A6%81%E5%AF%AB%E5%AD%A9%E5%AD%90%E5%85%A8%E5%90%8D%EF%BC%89%EF%BC%9A%0A%E8%BA%AB%E5%88%86%EF%BC%88%E4%BE%8B%EF%BC%9A%E5%B0%8F%E4%B8%89%E5%AA%BD%E5%AA%BD%E3%80%81%E5%9C%8B%E5%B0%8F%E8%80%81%E5%B8%AB%EF%BC%89%EF%BC%9A%0A%E5%BF%83%E5%BE%97%EF%BC%88%E8%AE%80%E4%BA%86%E5%93%AA%E4%B8%80%E8%BC%AF%E3%80%81%E7%8E%A9%E4%BA%86%E9%81%8A%E6%88%B2%E3%80%81%E5%AD%A9%E5%AD%90%E7%9A%84%E5%8F%8D%E6%87%89%E9%83%BD%E5%8F%AF%E4%BB%A5%EF%BC%89%EF%BC%9A%0A%0A%E2%96%A1%20%E5%90%8C%E6%84%8F%E6%96%91%E6%96%91%E5%B7%A5%E4%BD%9C%E5%AE%A4%E6%8A%8A%E4%BB%A5%E4%B8%8A%E6%9A%B1%E7%A8%B1%E5%92%8C%E5%BF%83%E5%BE%97%E5%88%8A%E7%99%BB%E5%9C%A8%E5%AE%98%E7%B6%B2%E8%88%87%E7%A4%BE%E7%BE%A4%EF%BC%88%E5%90%8C%E6%84%8F%E8%AB%8B%E6%8A%8A%20%E2%96%A1%20%E6%94%B9%E6%88%90%20%E2%9C%94%EF%BC%89%0A" style="background:var(--gr)">✉️ 寫心得給斑斑</a><a href="https://www.threads.com/@banbanstudio.tw" target="_blank" rel="noopener" style="background:#3a2e26">在 Threads 留言</a></div>
+   <p class="cnote">只刊登暱稱，不刊孩子全名、學校和照片；每則心得都先由斑斑工作室看過才上牆。</p></div>
+ </div>
+ <div class="wall" id="wall"></div>
+</section>
+
 <div class="contact" id="contact"><div style="font-size:20px">學校、圖書館、出版社、通路合作，歡迎來信 💌</div>
  <a class="mail" href="mailto:banbanstudio.tw@gmail.com">banbanstudio.tw@gmail.com</a></div>
 </div>
@@ -215,5 +244,18 @@ fetch('news.json?'+Date.now()).then(r=>r.json()).then(L=>{const now=Date.now();
  document.getElementById('newsList').innerHTML=L.sort((a,b)=>a.d<b.d?1:-1).slice(0,8).map(n=>{const isNew=(now-new Date(n.d))<14*864e5;
  return `<a class="nw${isNew?' new':''}" ${n.link?`href="${n.link}"${n.link.startsWith('http')?' target="_blank"':''}`:''}><div class="ic">${n.icon||'⭐'}</div><div class="dt">${n.d.slice(5).replace('-','/')}</div><b>${n.t}</b><span>${n.s||''}</span></a>`}).join('')}).catch(()=>{document.getElementById('news').style.display='none'});
 document.querySelectorAll('.mate').forEach(m=>m.addEventListener('click',()=>{m.classList.remove('boing');void m.offsetWidth;m.classList.add('boing')}));
+
+(function(){var U='https://banbanstudio.github.io/',T='斑斑工作室：成語漫畫、闖關遊戲，孩子自己想讀想玩！';
+document.getElementById('shLine').href='https://social-plugins.line.me/lineit/share?url='+encodeURIComponent(U);
+document.getElementById('shFb').href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(U);
+document.getElementById('shCopy').onclick=function(){var m=document.getElementById('shMsg');
+ if(navigator.share){navigator.share({title:'斑斑工作室',text:T,url:U}).catch(function(){});return}
+ (navigator.clipboard?navigator.clipboard.writeText(T+' '+U):Promise.reject()).then(function(){m.textContent='✅ 已複製，貼到群組就好！'}).catch(function(){m.textContent='請複製這個網址：'+U})};
+['shLine','shFb','shCopy','rvMail'].forEach(function(id){document.getElementById(id).addEventListener('click',function(){try{gcEvent('朋友圈/'+id)}catch(e){}})});
+var esc=function(t){return String(t||'').replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+fetch('reviews.json?'+Date.now()).then(function(r){return r.json()}).then(function(L){var w=document.getElementById('wall');
+ if(!L.length){w.innerHTML='<div class="rv empty"><q>第一位分享心得的朋友，會出現在這裡！</q><small>— 斑斑在等你 🐾</small></div>';return}
+ w.innerHTML=L.sort(function(a,b){return a.d<b.d?1:-1}).slice(0,12).map(function(r){return '<div class="rv"><q>'+esc(r.text)+'</q><small>— '+esc(r.name)+(r.who?'（'+esc(r.who)+'）':'')+(r.src?'・來自 '+esc(r.src):'')+'</small></div>'}).join('')}).catch(function(){});
+})();
 </script>
 </body></html>
