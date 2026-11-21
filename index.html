@@ -244,8 +244,7 @@ const bgm=new Audio('audio/bgm.mp3');bgm.loop=true;bgm.volume=.35;const pop=new 
 const sb=document.getElementById('snd');let off=false;try{off=localStorage.getItem('bbsnd')==='off'}catch(e){}
 function setSnd(v){snd=v;sb.classList.toggle('on',v);sb.innerHTML=v?'<b>🎵</b><span>音樂開</span>':'<b>🔇</b><span>聽音樂</span>';sb.title=v?'關掉音樂':'打開音樂';v?bgm.play().catch(()=>{}):bgm.pause()}
 sb.onclick=e=>{e.stopPropagation();setSnd(!snd);try{localStorage.setItem('bbsnd',snd?'on':'off')}catch(e){}};
-bgm.play().then(()=>setSnd(true)).catch(()=>{});
-const first=e=>{if(sb.contains(e.target))return;document.removeEventListener('pointerdown',first,true);if(!off&&!snd)setSnd(true)};document.addEventListener('pointerdown',first,true);
+/* 音樂預設關閉，只有按「聽音樂」才播放 */
 document.querySelectorAll('.mate,.tk,.bb').forEach(el=>el.addEventListener('click',()=>{if(snd){pop.currentTime=0;pop.play().catch(()=>{})}}));
 fetch('news.json?'+Date.now()).then(r=>r.json()).then(L=>{const now=Date.now();
  document.getElementById('newsList').innerHTML=L.sort((a,b)=>a.d<b.d?1:-1).slice(0,8).map(n=>{const isNew=(now-new Date(n.d))<14*864e5;
