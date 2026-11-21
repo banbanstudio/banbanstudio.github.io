@@ -1,0 +1,4 @@
+<!doctype html><meta charset="utf-8"><script>
+window.addEventListener('message',async e=>{const u=e.data&&e.data.get;if(!u||!/^[\w.-]+$/.test(u))return;try{const b=await (await fetch(u)).arrayBuffer();parent.postMessage({got:u,buf:b},'*',[b]);}catch(err){parent.postMessage({got:u,err:String(err)},'*');}});
+parent.postMessage({ready:1},'*');
+</script>
