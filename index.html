@@ -104,6 +104,12 @@ section{padding:46px 0}
 footer{text-align:center;padding:26px 0 40px;opacity:.65;font-size:14px}
 @media(max-width:820px){.hero{grid-template-columns:1fr}.stage{height:340px}.star{width:230px}.friend{width:90px}.bubble{font-size:17px;max-width:210px}.navb{display:none}.cast{grid-template-columns:repeat(3,1fr)}.mate img{height:110px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important}}
+
+.board{margin:26px auto 6px;max-width:760px;background:#fff;border:3px solid var(--ink);border-radius:20px;padding:16px 18px;text-align:center;box-shadow:0 6px 0 var(--ink)}
+.board h2{margin:0 0 10px;font-size:22px}.board .nums{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.board .nums div{flex:1 1 150px;background:var(--cream);border-radius:14px;padding:10px 6px}
+.board b{display:block;font-size:34px;line-height:1.1;font-variant-numeric:tabular-nums}.board small{font-size:14px;opacity:.75}
+.board .big b{color:var(--or);font-size:42px}
 </style><script data-goatcounter="https://chengyu.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>window.gcEvent=function(p){try{if(location.hostname.indexOf("github.io")<0)return;var f=function(){window.goatcounter&&window.goatcounter.count&&window.goatcounter.count({path:p,title:p,event:true});};window.goatcounter&&window.goatcounter.count?f():setTimeout(f,1500);}catch(e){}};
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.href,s=/pubu\.com\.tw/.test(h)?'Pubu':/kobo\.com/.test(h)?'Kobo':/amazon\./.test(h)?'Kindle':/chengyu-game/.test(h)?'遊戲':'';if(!s)return;if(s==='遊戲'){gcEvent('官網/點遊戲');return}gcEvent('點購書/'+s+'/官網');gcEvent('點購書/全部');gcEvent('點購書/官網');},true);</script>
@@ -183,6 +189,14 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
  <img class="pimg" src="img/parents.jpg" alt="親子一起看斑斑的漫畫">
 </div></section>
 
+<div class="board" id="board"><h2>👀 斑斑瀏覽人次看板</h2><div class="nums">
+ <div class="big"><b id="bdTotal">…</b><small>總瀏覽人次</small></div>
+ <div><b id="bdSite">…</b><small>📖 看成語故事</small></div>
+ <div><b id="bdGame">…</b><small>🎮 玩成語遊戲</small></div></div>
+ <div style="font-size:13px;opacity:.65;margin-top:8px">謝謝每一位來找斑斑玩的朋友！</div></div>
+<script>(function(){var C='https://chengyu.goatcounter.com/counter/',g=function(p){return fetch(C+encodeURIComponent(p)+'.json').then(function(r){return r.ok?r.json():{count:'0'}}).then(function(d){return parseInt(String(d.count).replace(/\D/g,''))||0}).catch(function(){return null})};
+Promise.all([g('TOTAL'),g('/chengyu-game/'),g('/chengyu-game/promo/')]).then(function(a){if(a[0]==null){document.getElementById('board').style.display='none';return}var f=function(n){return n.toLocaleString('zh-TW')};
+document.getElementById('bdTotal').textContent=f(a[0]);document.getElementById('bdGame').textContent=f(a[1]||0);document.getElementById('bdSite').textContent=f(Math.max(0,a[0]-(a[1]||0)-(a[2]||0)))})})();</script>
 <div class="contact" id="contact"><div style="font-size:20px">學校、圖書館、出版社、通路合作，歡迎來信 💌</div>
  <a class="mail" href="mailto:banbanstudio.tw@gmail.com">banbanstudio.tw@gmail.com</a></div>
 </div>
