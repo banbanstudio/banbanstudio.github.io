@@ -1,48 +1,129 @@
 <!DOCTYPE html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>斑斑工作室｜成語原來是這樣來的</title>
+<title>斑斑工作室｜讓孩子笑著學會重要的事</title>
+<meta name="description" content="斑斑工作室用漫畫、故事和遊戲，把中文、品格與理財這些重要的事，變成孩子自己想讀、想玩的內容。">
 <style>
-:root{--bg:#fff6e6;--ink:#2b2b2b;--or:#e8654a;--yl:#ffd64d;--gr:#2f6e4f}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:"PingFang TC","Noto Sans TC",system-ui,sans-serif;line-height:1.7}
-.w{max-width:980px;margin:0 auto;padding:0 20px}
-header{padding:56px 0 40px;text-align:center}
-.cat{width:140px;height:140px;margin:0 auto 14px;display:block;border-radius:50%;object-fit:cover;border:5px solid var(--ink);box-shadow:4px 4px 0 var(--ink)}
-h1{font-size:clamp(30px,6vw,52px);margin:0;letter-spacing:.08em}h1 em{font-style:normal;background:var(--yl);padding:0 .2em}
-.sub{font-size:18px;opacity:.8}
-.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:24px}
-.btn{display:inline-block;padding:12px 22px;border:3px solid var(--ink);border-radius:999px;background:#fff;color:var(--ink);text-decoration:none;font-weight:700;box-shadow:4px 4px 0 var(--ink)}
-.btn.o{background:var(--or);color:#fff}.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
-section{padding:36px 0}h2{font-size:28px;border-left:10px solid var(--or);padding-left:12px}
-.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
-.feat div{background:#fff;border:3px solid var(--ink);border-radius:16px;padding:18px}.feat b{font-size:20px;display:block}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:14px}
-.bk{background:hsl(var(--h) 70% 92%);border:3px solid var(--ink);border-radius:12px;padding:14px;display:flex;flex-direction:column}
-.bk b{color:var(--or)}.bk span{font-size:18px;font-weight:700}.bk small{opacity:.6}
-.next{background:var(--gr);color:#fff;border-radius:20px;padding:24px}.next h2{border-color:var(--yl)}
-.btn.g{background:#2f6e4f;color:#fff}footer a{color:inherit}footer{text-align:center;padding:40px 0;opacity:.7;font-size:14px}
+:root{--bg:#fff6e6;--ink:#2b2b2b;--or:#e8654a;--yl:#ffd64d;--gr:#2f6e4f;--bl:#3b6fd8}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:"PingFang TC","Noto Sans TC",system-ui,sans-serif;line-height:1.75}
+a{color:inherit}
+.w{max-width:1040px;margin:0 auto;padding:0 20px}
+nav.top{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
+nav.top .logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:20px;text-decoration:none}
+nav.top .logo img{width:40px;height:40px;border-radius:50%;border:3px solid var(--ink);object-fit:cover}
+nav.top .links a{margin-left:16px;text-decoration:none;font-weight:700;opacity:.8}
+.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:28px;align-items:center;padding:28px 0 40px}
+.hero h1{font-size:clamp(32px,5.4vw,54px);line-height:1.25;margin:0 0 14px;letter-spacing:.04em}
+.hero h1 em{font-style:normal;background:var(--yl);padding:0 .15em}
+.hero p{font-size:18px;margin:0 0 22px;opacity:.85}
+.hero .art{border:4px solid var(--ink);border-radius:22px;overflow:hidden;box-shadow:8px 8px 0 var(--ink);background:#fff}
+.hero .art img{display:block;width:100%;height:auto}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:11px 20px;border:3px solid var(--ink);border-radius:999px;background:#fff;color:var(--ink);text-decoration:none;font-weight:800;box-shadow:4px 4px 0 var(--ink)}
+.btn.o{background:var(--or);color:#fff}.btn.g{background:var(--gr);color:#fff}
+.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
+section{padding:40px 0}
+h2{font-size:30px;margin:0 0 18px;border-left:10px solid var(--or);padding-left:12px}
+.lead{font-size:18px;max-width:760px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.card{background:#fff;border:3px solid var(--ink);border-radius:18px;padding:20px}
+.card .ic{font-size:30px}.card b{display:block;font-size:20px;margin:4px 0}
+.mission{background:var(--gr);color:#fff;border-radius:24px;padding:30px}
+.mission h2{border-color:var(--yl)}
+.mission blockquote{font-size:clamp(22px,3.4vw,30px);font-weight:900;margin:0 0 14px;line-height:1.5}
+.vals{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:18px}
+.vals div{background:#ffffff1a;border:2px solid #ffffff55;border-radius:14px;padding:14px}
+.vals b{color:var(--yl);display:block;font-size:18px}
+.prods{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.prod{background:#fff;border:3px solid var(--ink);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;box-shadow:6px 6px 0 var(--ink)}
+.prod .pic{height:190px;background:#f3e6cf center/cover no-repeat;border-bottom:3px solid var(--ink)}
+.prod .bd{padding:18px;display:flex;flex-direction:column;gap:6px;flex:1}
+.prod h3{margin:0;font-size:22px}
+.tag{display:inline-block;font-size:13px;font-weight:800;padding:2px 10px;border-radius:999px;border:2px solid var(--ink);margin-right:6px}
+.t-on{background:#d9f0e1}.t-soon{background:#fff0c2}.t-free{background:#dbe7ff}
+.prod .act{margin-top:auto;padding-top:10px;display:flex;gap:10px;flex-wrap:wrap}
+.cast{display:flex;gap:8px;justify-content:center;align-items:flex-end;margin:8px 0 -10px;flex-wrap:wrap}
+.cast img{height:120px;width:auto}
+.story{display:grid;grid-template-columns:180px 1fr;gap:24px;align-items:center}
+.story img{width:180px;height:180px;border-radius:50%;border:5px solid var(--ink);object-fit:cover;box-shadow:5px 5px 0 var(--ink)}
+.contact{background:#fff;border:3px solid var(--ink);border-radius:20px;padding:24px;text-align:center}
+.contact .mail{font-size:22px;font-weight:900}
+footer{text-align:center;padding:36px 0;opacity:.7;font-size:14px}
+@media(max-width:760px){.hero{grid-template-columns:1fr}.story{grid-template-columns:1fr;text-align:center}.story img{margin:0 auto}nav.top .links{display:none}.cast img{height:84px}}
 </style></head><body>
-<header class="w"><img class="cat" src="banban.jpg" alt="斑斑">
-<div class="sub">斑斑工作室</div>
-<h1>成語原來是<em>這樣來的</em></h1>
-<p class="sub">480 個成語，每個都是一頁四格漫畫。<br>先笑著看完故事，再記住成語從哪裡來。</p>
-<div class="btns">
-<a class="btn g" href="https://yuan0520.github.io/chengyu-game/" target="_blank">🎮 免費玩成語闖關遊戲</a>
-<a class="btn o" href="https://www.amazon.com/s?k=%E6%88%90%E8%AA%9E%E5%8E%9F%E4%BE%86%E6%98%AF%E9%80%99%E6%A8%A3%E4%BE%86%E7%9A%84&i=digital-text" target="_blank">Amazon Kindle</a>
-<a class="btn" href="https://www.kobo.com/tw/zh/search?query=%E6%88%90%E8%AA%9E%E5%8E%9F%E4%BE%86%E6%98%AF%E9%80%99%E6%A8%A3%E4%BE%86%E7%9A%84" target="_blank">樂天 Kobo</a>
-<a class="btn" href="https://www.pubu.com.tw/search?q=%E6%88%90%E8%AA%9E%E5%8E%9F%E4%BE%86%E6%98%AF%E9%80%99%E6%A8%A3%E4%BE%86%E7%9A%84" target="_blank">Pubu 電子書城</a>
-</div></header>
-<main class="w">
-<section><h2>為什麼孩子會喜歡</h2><div class="feat">
-<div><b>📖 一成語一頁漫畫</b>故事清楚、好笑又好記</div>
-<div><b>🔊 有聲朗讀</b>真人般的旁白和角色配音（Kobo／Pubu 版）</div>
-<div><b>🃏 成語卡</b>注音、意思、用法、例句一次看懂</div>
-<div><b>🎮 闖關遊戲</b>480 關免費玩，<a href="https://yuan0520.github.io/chengyu-game/" target="_blank">現在就開始</a></div>
+<div class="w">
+<nav class="top"><a class="logo" href="./"><img src="banban.jpg" alt="斑斑">斑斑工作室</a>
+<div class="links"><a href="#about">關於我們</a><a href="#what">我們做什麼</a><a href="#products">作品</a><a href="#contact">合作聯絡</a></div></nav>
+
+<header class="hero">
+ <div>
+  <h1>讓孩子<em>笑著</em><br>學會重要的事</h1>
+  <p>斑斑工作室用漫畫、故事和遊戲，把中文、品格與理財這些一輩子用得到的能力，變成孩子自己想讀、想玩的內容。</p>
+  <div class="btns"><a class="btn o" href="#products">看看我們的作品</a><a class="btn g" href="https://yuan0520.github.io/chengyu-game/" target="_blank">🎮 免費玩成語闖關</a></div>
+ </div>
+ <div class="art"><img src="img/meowtown.jpg" alt="喵喵鎮的貓咪們"></div>
+</header>
+</div>
+
+<div class="w">
+<section id="about"><div class="mission">
+ <h2>成立宗旨</h2>
+ <blockquote>好的學習，應該讓孩子自己想翻下一頁。</blockquote>
+ <p>孩子不是不愛學，是課本太難親近。我們相信，只要故事夠好笑、角色夠可愛、玩法夠好玩，成語的典故、做人的道理、錢該怎麼用，孩子都會自己記住。斑斑工作室就是為了做這樣的內容而成立。</p>
+ <div class="vals">
+  <div><b>有根有據</b>每個成語都查出處，每個理財觀念都對照生活，不亂編。</div>
+  <div><b>好笑好記</b>一頁一個故事，先笑出來，再記起來。</div>
+  <div><b>讀玩合一</b>書和遊戲用同一群角色，讀完書再玩遊戲複習。</div>
+  <div><b>親子共讀</b>孩子自己能讀，也適合和爸媽一起讀、一起討論。</div>
+ </div>
 </div></section>
-<section><h2>全系列 15 輯</h2><div class="grid"><div class="bk" style="--h:24"><b>第一輯</b><span>寓言與動物篇</span><small>32 個成語</small></div><div class="bk" style="--h:48"><b>第二輯</b><span>神話與勤學立志篇</span><small>32 個成語</small></div><div class="bk" style="--h:72"><b>第三輯</b><span>誠信與人情篇</span><small>32 個成語</small></div><div class="bk" style="--h:96"><b>第四輯</b><span>春秋戰國與秦朝篇</span><small>32 個成語</small></div><div class="bk" style="--h:120"><b>第五輯</b><span>楚漢三國篇</span><small>32 個成語</small></div><div class="bk" style="--h:144"><b>第六輯</b><span>謀略與品德篇</span><small>32 個成語</small></div><div class="bk" style="--h:168"><b>第七輯</b><span>諸子寓言與春秋篇</span><small>32 個成語</small></div><div class="bk" style="--h:192"><b>第八輯</b><span>兩漢三國篇</span><small>32 個成語</small></div><div class="bk" style="--h:216"><b>第九輯</b><span>晉唐宋與奇人篇</span><small>32 個成語</small></div><div class="bk" style="--h:240"><b>第十輯</b><span>莊子春秋戰國篇</span><small>32 個成語</small></div><div class="bk" style="--h:264"><b>第十一輯</b><span>史記與兩漢篇</span><small>32 個成語</small></div><div class="bk" style="--h:288"><b>第十二輯</b><span>三國到隋唐篇</span><small>32 個成語</small></div><div class="bk" style="--h:312"><b>第十三輯</b><span>孔子孟子篇</span><small>32 個成語</small></div><div class="bk" style="--h:336"><b>第十四輯</b><span>經典與兵法篇</span><small>32 個成語</small></div><div class="bk" style="--h:0"><b>第十五輯</b><span>詩經與歷史人物篇</span><small>32 個成語</small></div></div></section>
-<section class="next"><h2>斑斑工作室的下一步</h2>
-<p>🌏 <b>英文雙語版</b>：給海外學中文的孩子，簡體＋拼音＋英文，共 5 冊，2027 年推出。<br>
-💰 <b>兒童財商漫畫</b>：用漫畫和小遊戲學會存錢、花錢與做生意。</p></section>
-<section><h2>追蹤斑斑</h2><p>每週一、三、五晚上 8 點，一支 1 分鐘成語短影音。<br>
-<span style="opacity:.7">（IG／TikTok／YouTube 連結待帳號開好後補上）</span></p></section>
-</main>
-<footer>© 2026 斑斑工作室 · Dr. Yuan<br>合作與聯絡：<a href="mailto:banbanstudio.tw@gmail.com">banbanstudio.tw@gmail.com</a></footer>
+
+<section id="what"><h2>我們做什麼</h2>
+ <div class="cards">
+  <div class="card"><div class="ic">📚</div><b>兒童漫畫電子書</b>四格、多格漫畫，加上有聲朗讀，在 Kobo、Pubu、Amazon 等平台上架。</div>
+  <div class="card"><div class="ic">🎮</div><b>學習遊戲</b>闖關、經營、冒險，讓孩子在玩的時候把觀念練熟。</div>
+  <div class="card"><div class="ic">🎬</div><b>一分鐘短影音</b>每週更新的成語、理財小故事，在 YouTube、IG、TikTok 上看。</div>
+  <div class="card"><div class="ic">📝</div><b>學習單與教材</b>練習本、學習單，給家長和老師帶著孩子用。</div>
+ </div>
+</section>
+
+<section id="products"><h2>作品</h2>
+ <div class="prods">
+  <div class="prod"><div class="pic" style="background-image:url(img/chengyu_cover.jpg);background-position:center 18%"></div><div class="bd">
+   <div><span class="tag t-on">已上架</span><span class="tag">電子書 15 輯</span></div>
+   <h3>成語原來是這樣來的</h3>
+   <div>480 個成語，每個都是一頁四格漫畫，附成語卡、練習本與有聲朗讀。</div>
+   <div class="act"><a class="btn o" href="chengyu/">系列介紹</a></div></div></div>
+  <div class="prod"><div class="pic" style="background:#dbe7ff;display:flex;align-items:center;justify-content:center;font-size:72px">🏯</div><div class="bd">
+   <div><span class="tag t-free">免費玩</span><span class="tag">網頁遊戲</span></div>
+   <h3>成語闖關遊戲</h3>
+   <div>時空冒險 39 章、寓言島 22 島，480 關成語闖關，還有每日挑戰和家長成績單。</div>
+   <div class="act"><a class="btn g" href="https://yuan0520.github.io/chengyu-game/" target="_blank">開始玩</a></div></div></div>
+  <div class="prod"><div class="pic" style="background-image:url(img/meowtown.jpg)"></div><div class="bd">
+   <div><span class="tag t-soon">2027 推出</span><span class="tag">電子書 6 輯</span></div>
+   <h3>喵喵鎮理財冒險</h3>
+   <div>斑斑和喵喵鎮的貓咪們，用一個個故事教孩子：錢從哪裡來、需要還是想要、怎麼存錢、怎麼防詐騙。</div></div></div>
+  <div class="prod"><div class="pic" style="background:#ffe3d6 url(img/banban.webp) center/contain no-repeat"></div><div class="bd">
+   <div><span class="tag t-soon">製作中</span><span class="tag">經營遊戲</span></div>
+   <h3>喵喵鎮小店長</h3>
+   <div>種菜、做料理、開店、和對手比賽，在經營小店的過程中學會收入、成本和儲蓄。</div></div></div>
+  <div class="prod"><div class="pic" style="background:#fff0c2;display:flex;align-items:center;justify-content:center;font-size:64px">🌏</div><div class="bd">
+   <div><span class="tag t-soon">2027 推出</span><span class="tag">雙語電子書 5 冊</span></div>
+   <h3>成語英文雙語版</h3>
+   <div>給海外學中文的孩子：簡體中文＋拼音＋英文，依主題精選成語故事。</div></div></div>
+ </div>
+</section>
+
+<section><h2>斑斑是誰？</h2>
+ <div class="story"><img src="banban.jpg" alt="斑斑">
+ <div><p class="lead">斑斑是一隻真的貓，長毛虎斑、白色圍兜、四隻白手套，是工作室的「吉祥物兼總監」。我們書裡和遊戲裡的主角都以牠為原型，還有牠的姊姊飛飛和一群貓朋友。</p>
+ <p>工作室由作者 <b>Dr. Yuan</b> 創立。身為理工背景的爸爸，他想做的是：查證嚴謹、但孩子一拿起來就放不下的學習內容。</p></div></div>
+ <div class="cast"><img src="img/feifei.webp" alt="飛飛"><img src="img/banban.webp" alt="斑斑"><img src="img/dingding.webp" alt="丁丁"><img src="img/dudu.webp" alt="嘟嘟"><img src="img/laicai.webp" alt="來財"></div>
+</section>
+
+<section id="contact"><div class="contact">
+ <h2 style="border:0;padding:0;margin-bottom:8px">合作與聯絡</h2>
+ <p>學校、圖書館、出版社、通路、授權合作，都歡迎來信。</p>
+ <div class="mail"><a href="mailto:banbanstudio.tw@gmail.com">banbanstudio.tw@gmail.com</a></div>
+</div></section>
+</div>
+<footer>© 2026 斑斑工作室 · Dr. Yuan</footer>
 </body></html>
