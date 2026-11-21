@@ -59,6 +59,10 @@ section{padding:46px 0}
 .prog{display:flex;gap:4px;margin:4px 0 0}.prog i{flex:1;height:10px;border-radius:6px;background:#eadfce}.prog i.on{background:var(--gr)}.prog i.now{background:var(--or);animation:blink 1.2s ease-in-out infinite}
 @keyframes blink{50%{opacity:.45}}
 .pl{font-size:14px;opacity:.7}
+.news{display:flex;gap:16px;overflow-x:auto;padding:6px 4px 16px;scroll-snap-type:x mandatory}
+.nw{flex:0 0 280px;scroll-snap-align:start;background:#fff;border:4px solid var(--ink);border-radius:24px;padding:14px 16px;box-shadow:0 6px 0 var(--ink);text-decoration:none;display:block}
+.nw .ic{font-size:34px;line-height:1}.nw .dt{font-size:13px;opacity:.6}.nw b{display:block;font-size:19px;margin:4px 0}.nw span{font-size:15px;opacity:.85}
+.nw.new{background:#fffbe0}.nw.new .dt:after{content:" NEW";color:#fff;background:var(--or);border-radius:8px;padding:0 6px;margin-left:6px;font-size:12px}
 .town{background:linear-gradient(#fff7e8,#ffe9d2)}
 .cast{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
 .mate{text-align:center;background:#fff;border:4px solid var(--ink);border-radius:26px;padding:12px 8px 14px;box-shadow:0 7px 0 var(--ink);cursor:pointer;transition:transform .15s}
@@ -88,7 +92,7 @@ footer{text-align:center;padding:26px 0 40px;opacity:.65;font-size:14px}
  <div class="cloud" style="top:30px;width:100px;height:34px;animation-duration:40s;animation-delay:-22s"></div>
  <div class="w">
   <nav class="top"><a class="logo" href="./"><img src="banban.jpg" alt="斑斑">斑斑工作室</a>
-   <div class="navb"><a href="#play">🎈 玩什麼</a><a href="#friends">🐾 認識朋友</a><a href="#parents">👨‍👩‍👧 給爸媽</a></div></nav>
+   <div class="navb"><a href="#news">📣 快報</a><a href="#play">🎈 玩什麼</a><a href="#friends">🐾 認識朋友</a><a href="#parents">👨‍👩‍👧 給爸媽</a></div></nav>
   <div class="hero">
    <div>
     <h1 class="hello"><span>歡</span><span>迎</span><span>光</span><span>臨</span><br>斑斑的世界！</h1>
@@ -108,6 +112,11 @@ footer{text-align:center;padding:26px 0 40px;opacity:.65;font-size:14px}
 </div>
 
 <div class="w">
+<section id="news" style="padding-bottom:10px">
+ <h2 class="ttl">📣 斑斑<em>快報</em></h2>
+ <p class="sub">最新消息都在這裡！</p>
+ <div class="news" id="newsList"></div>
+</section>
 <section id="play">
  <h2 class="ttl">今天想<em>玩什麼</em>？</h2>
  <p class="sub">點一張卡片，開始你的冒險！</p>
@@ -165,6 +174,9 @@ footer{text-align:center;padding:26px 0 40px;opacity:.65;font-size:14px}
 </div>
 <footer>© 2026 斑斑工作室 · Dr. Yuan</footer>
 <script>
+fetch('news.json?'+Date.now()).then(r=>r.json()).then(L=>{const now=Date.now();
+ document.getElementById('newsList').innerHTML=L.sort((a,b)=>a.d<b.d?1:-1).slice(0,8).map(n=>{const isNew=(now-new Date(n.d))<14*864e5;
+ return `<a class="nw${isNew?' new':''}" ${n.link?`href="${n.link}"${n.link.startsWith('http')?' target="_blank"':''}`:''}><div class="ic">${n.icon||'⭐'}</div><div class="dt">${n.d.slice(5).replace('-','/')}</div><b>${n.t}</b><span>${n.s||''}</span></a>`}).join('')}).catch(()=>{document.getElementById('news').style.display='none'});
 document.querySelectorAll('.mate').forEach(m=>m.addEventListener('click',()=>{m.classList.remove('boing');void m.offsetWidth;m.classList.add('boing')}));
 </script>
 </body></html>
