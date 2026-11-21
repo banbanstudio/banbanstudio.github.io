@@ -121,6 +121,12 @@ footer{text-align:center;padding:26px 0 40px;opacity:.65;font-size:14px}
 .rv.empty{grid-column:1/-1;border-style:dashed;text-align:center;opacity:.8}
 .cnote{font-size:13px;opacity:.7;margin-top:10px}
 @media(max-width:820px){.club .g3{grid-template-columns:1fr}}
+
+.tv{position:fixed;inset:0;background:rgba(30,22,16,.82);display:none;align-items:center;justify-content:center;z-index:50;padding:16px}
+.tv.on{display:flex}.tv .box{position:relative;width:min(380px,92vw)}
+.tv video{width:100%;max-height:82vh;border-radius:20px;border:4px solid #fff;background:#000;display:block}
+.tv .x{position:absolute;top:-14px;right:-14px;width:40px;height:40px;border-radius:50%;border:3px solid var(--ink);background:#fff;font-size:20px;cursor:pointer}
+.tv p{color:#fff;text-align:center;margin:10px 0 0;font-size:15px}
 </style><script>window.goatcounter={path:function(){return location.pathname||"/"}}</script><script data-goatcounter="https://chengyu.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>window.gcEvent=function(p){try{if(location.hostname.indexOf("github.io")<0)return;var f=function(){window.goatcounter&&window.goatcounter.count&&window.goatcounter.count({path:p,title:p,event:true});};window.goatcounter&&window.goatcounter.count?f():setTimeout(f,1500);}catch(e){}};
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.href,s=/pubu\.com\.tw/.test(h)?'Pubu':/kobo\.com/.test(h)?'Kobo':/amazon\./.test(h)?'Kindle':/chengyu-game/.test(h)?'遊戲':'';if(!s)return;if(s==='遊戲'){gcEvent('官網/點遊戲');return}gcEvent('點購書/'+s+'/官網');gcEvent('點購書/全部');gcEvent('點購書/官網');},true);</script>
@@ -166,10 +172,10 @@ document.getElementById('bdHome').textContent=f(a[3]||0);document.getElementById
    <div class="pic" style="background-image:url(img/card_game.jpg)"></div>
    <div class="bd"><h3>成語闖關遊戲</h3><p>穿越到古代，480 關成語大挑戰！</p>
    <span class="go" style="background:var(--gr)">馬上玩 ▶</span></div></a>
-  <div class="tk c3"><span class="badge">✨ 即將登場</span>
+  <a class="tk c3" href="#teaser" id="tkMoney"><span class="badge">🎬 預告片上線</span>
    <div class="pic" style="background-image:url(img/card_money.jpg)"></div>
-   <div class="bd"><h3>喵喵鎮理財冒險</h3><p>跟著斑斑學存錢、聰明花錢，還要小心騙子！</p>
-   <span class="go" style="background:#9b7bff">敬請期待 ✨</span></div></div>
+   <div class="bd"><h3>喵喵鎮理財冒險</h3><p>拿到零用錢，你會怎麼花？跟著貓咪一起學存錢、聰明花錢！</p>
+   <span class="go" style="background:#9b7bff">看預告 ▶</span></div></a>
   <div class="tk c4"><span class="badge">✨ 即將登場</span>
    <div class="pic" style="background-image:url(img/card_shop.jpg)"></div>
    <div class="bd"><h3>喵喵鎮小店長</h3><p>種菜、煮料理、開一家自己的小店，看誰最會做生意！</p>
@@ -230,6 +236,7 @@ document.getElementById('bdHome').textContent=f(a[3]||0);document.getElementById
 <div class="contact" id="contact"><div style="font-size:20px">學校、圖書館、出版社、通路合作，歡迎來信 💌</div>
  <a class="mail" href="mailto:banbanstudio.tw@gmail.com">banbanstudio.tw@gmail.com</a></div>
 </div>
+<div class="tv" id="tv"><div class="box"><button class="x" id="tvx" aria-label="關閉">✕</button><video id="tvv" controls playsinline preload="none" poster="img/money_teaser.jpg"><source src="video/money_teaser.mp4" type="video/mp4"></video><p>《喵喵鎮理財冒險》跟貓咪一起學理財・敬請期待</p></div></div>
 <button class="snd" id="snd" title="打開音樂" aria-label="音樂開關"><b>🔇</b><span>聽音樂</span></button>
 <footer>© 2026 斑斑工作室 · Dr. Yuan</footer>
 <script>
@@ -257,5 +264,13 @@ fetch('reviews.json?'+Date.now()).then(function(r){return r.json()}).then(functi
  if(!L.length){w.innerHTML='<div class="rv empty"><q>第一位分享心得的朋友，會出現在這裡！</q><small>— 斑斑在等你 🐾</small></div>';return}
  w.innerHTML=L.sort(function(a,b){return a.d<b.d?1:-1}).slice(0,12).map(function(r){return '<div class="rv"><q>'+esc(r.text)+'</q><small>— '+esc(r.name)+(r.who?'（'+esc(r.who)+'）':'')+(r.src?'・來自 '+esc(r.src):'')+'</small></div>'}).join('')}).catch(function(){});
 })();
+
+(function(){var tv=document.getElementById('tv'),v=document.getElementById('tvv');
+function open(){tv.classList.add('on');try{bgm.pause()}catch(e){}v.play().catch(function(){});try{gcEvent('預告/喵喵鎮理財冒險')}catch(e){}}
+function close(){tv.classList.remove('on');v.pause();if(location.hash==='#teaser')history.replaceState(null,'',location.pathname);if(snd)bgm.play().catch(function(){})}
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href="#teaser"]');if(a){e.preventDefault();open()}});
+document.getElementById('tvx').onclick=close;tv.onclick=function(e){if(e.target===tv)close()};
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&tv.classList.contains('on'))close()});
+if(location.hash==='#teaser')setTimeout(open,600);})();
 </script>
 </body></html>
