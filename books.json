@@ -1,0 +1,200 @@
+{
+ "store": "https://www.pubu.com.tw/store/dryuan",
+ "books": [
+  {
+   "vol": 1,
+   "title": "成語原來是這樣來的．第一輯：寓言與動物篇",
+   "short": "第一輯・寓言與動物篇",
+   "cover": "img/books/vol01.jpg",
+   "eps": [
+    1,
+    4
+   ],
+   "pubu": "https://www.pubu.com.tw/ebook/709396",
+   "kobo": "https://www.kobo.com/tw/zh/ebook/0TGGjAYKMj6hQx2yG30TfQ",
+   "amazon": "https://www.amazon.com/s?k=%E6%88%90%E8%AA%9E%E5%8E%9F%E4%BE%86%E6%98%AF%E9%80%99%E6%A8%A3%E4%BE%86%E7%9A%84&i=digital-text"
+  },
+  {
+   "vol": 2,
+   "title": "成語原來是這樣來的．第二輯：神話與勤學立志篇",
+   "short": "第二輯・神話與勤學立志篇",
+   "cover": "img/books/vol02.jpg",
+   "eps": [
+    5,
+    8
+   ],
+   "pubu": "https://www.pubu.com.tw/ebook/709398",
+   "kobo": "https://www.kobo.com/tw/zh/ebook/rJYcy9MZgjCthcWkTnhI0w",
+   "amazon": "https://www.amazon.com/s?k=%E6%88%90%E8%AA%9E%E5%8E%9F%E4%BE%86%E6%98%AF%E9%80%99%E6%A8%A3%E4%BE%86%E7%9A%84&i=digital-text"
+  },
+  {
+   "vol": 3,
+   "title": "成語原來是這樣來的．第三輯：誠信與人情篇",
+   "short": "第三輯・誠信與人情篇",
+   "cover": "img/books/vol03.jpg",
+   "eps": [
+    9,
+    12
+   ],
+   "pubu": "https://www.pubu.com.tw/ebook/709399",
+   "kobo": "https://www.kobo.com/tw/zh/ebook/cvQFO6JB5DeF6AifY7U6Sw",
+   "amazon": "https://www.amazon.com/s?k=%E6%88%90%E8%AA%9E%E5%8E%9F%E4%BE%86%E6%98%AF%E9%80%99%E6%A8%A3%E4%BE%86%E7%9A%84&i=digital-text"
+  },
+  {
+   "vol": 4,
+   "title": "成語原來是這樣來的．第四輯：春秋戰國與秦朝篇",
+   "short": "第四輯・春秋戰國與秦朝篇",
+   "cover": "img/books/vol04.jpg",
+   "eps": [
+    13,
+    16
+   ],
+   "pubu": "https://www.pubu.com.tw/ebook/709401",
+   "kobo": "https://www.kobo.com/tw/zh/ebook/H8IHSLSf2D27iPE1qAc5WA",
+   "amazon": "https://www.amazon.com/s?k=%E6%88%90%E8%AA%9E%E5%8E%9F%E4%BE%86%E6%98%AF%E9%80%99%E6%A8%A3%E4%BE%86%E7%9A%84&i=digital-text"
+  },
+  {
+   "vol": 5,
+   "title": "成語原來是這樣來的．第五輯：楚漢三國篇",
+   "short": "第五輯・楚漢三國篇",
+   "cover": "img/books/vol05.jpg",
+   "eps": [
+    17,
+    20
+   ],
+   "pubu": "https://www.pubu.com.tw/ebook/709402",
+   "kobo": "https://www.kobo.com/tw/zh/ebook/rjZ4sIFQmjSW5Kv3DMZFYA",
+   "amazon": "https://www.amazon.com/s?k=%E6%88%90%E8%AA%9E%E5%8E%9F%E4%BE%86%E6%98%AF%E9%80%99%E6%A8%A3%E4%BE%86%E7%9A%84&i=digital-text"
+  },
+  {
+   "vol": 6,
+   "title": "成語原來是這樣來的．第六輯：謀略與品德篇",
+   "short": "第六輯・謀略與品德篇",
+   "cover": "img/books/vol06.jpg",
+   "eps": [
+    21,
+    24
+   ],
+   "pubu": "https://www.pubu.com.tw/ebook/709403",
+   "kobo": "https://www.kobo.com/tw/zh/ebook/PNDfmSuk_T-INbYAf_g-3g",
+   "amazon": "https://www.amazon.com/s?k=%E6%88%90%E8%AA%9E%E5%8E%9F%E4%BE%86%E6%98%AF%E9%80%99%E6%A8%A3%E4%BE%86%E7%9A%84&i=digital-text"
+  },
+  {
+   "vol": 7,
+   "title": "成語原來是這樣來的．第七輯：諸子寓言與春秋篇",
+   "short": "第七輯・諸子寓言與春秋篇",
+   "cover": "img/books/vol07.jpg",
+   "eps": [
+    25,
+    28
+   ],
+   "pubu": "https://www.pubu.com.tw/ebook/709404",
+   "kobo": "https://www.kobo.com/tw/zh/ebook/bibSj-M43zGzkQLwOFyJOg",
+   "amazon": "https://www.amazon.com/s?k=%E6%88%90%E8%AA%9E%E5%8E%9F%E4%BE%86%E6%98%AF%E9%80%99%E6%A8%A3%E4%BE%86%E7%9A%84&i=digital-text"
+  },
+  {
+   "vol": 8,
+   "title": "成語原來是這樣來的．第八輯：兩漢三國篇",
+   "short": "第八輯・兩漢三國篇",
+   "cover": "img/books/vol08.jpg",
+   "eps": [
+    29,
+    32
+   ],
+   "pubu": "https://www.pubu.com.tw/ebook/709406",
+   "kobo": "https://www.kobo.com/tw/zh/ebook/DO6KKFp18TiLXf4d2huTJQ",
+   "amazon": "https://www.amazon.com/s?k=%E6%88%90%E8%AA%9E%E5%8E%9F%E4%BE%86%E6%98%AF%E9%80%99%E6%A8%A3%E4%BE%86%E7%9A%84&i=digital-text"
+  },
+  {
+   "vol": 9,
+   "title": "成語原來是這樣來的．第九輯：晉唐宋與奇人篇",
+   "short": "第九輯・晉唐宋與奇人篇",
+   "cover": "img/books/vol09.jpg",
+   "eps": [
+    33,
+    36
+   ],
+   "pubu": "https://www.pubu.com.tw/ebook/709407",
+   "kobo": "https://www.kobo.com/tw/zh/ebook/CH_eph2GjzKu-3n0-ioOnQ",
+   "amazon": "https://www.amazon.com/s?k=%E6%88%90%E8%AA%9E%E5%8E%9F%E4%BE%86%E6%98%AF%E9%80%99%E6%A8%A3%E4%BE%86%E7%9A%84&i=digital-text"
+  },
+  {
+   "vol": 10,
+   "title": "成語原來是這樣來的．第十輯：莊子春秋戰國篇",
+   "short": "第十輯・莊子春秋戰國篇",
+   "cover": "img/books/vol10.jpg",
+   "eps": [
+    37,
+    40
+   ],
+   "pubu": "https://www.pubu.com.tw/ebook/709408",
+   "kobo": "https://www.kobo.com/tw/zh/ebook/QMSwwZmGmj2NVcLFOACfhA",
+   "amazon": "https://www.amazon.com/s?k=%E6%88%90%E8%AA%9E%E5%8E%9F%E4%BE%86%E6%98%AF%E9%80%99%E6%A8%A3%E4%BE%86%E7%9A%84&i=digital-text"
+  },
+  {
+   "vol": 11,
+   "title": "成語原來是這樣來的．第十一輯：史記與兩漢篇",
+   "short": "第十一輯・史記與兩漢篇",
+   "cover": "img/books/vol11.jpg",
+   "eps": [
+    41,
+    44
+   ],
+   "pubu": "https://www.pubu.com.tw/ebook/709409",
+   "kobo": "https://www.kobo.com/tw/zh/ebook/r_XfEL-ctDWFOPApqrQskQ",
+   "amazon": "https://www.amazon.com/s?k=%E6%88%90%E8%AA%9E%E5%8E%9F%E4%BE%86%E6%98%AF%E9%80%99%E6%A8%A3%E4%BE%86%E7%9A%84&i=digital-text"
+  },
+  {
+   "vol": 12,
+   "title": "成語原來是這樣來的．第十二輯：三國到隋唐篇",
+   "short": "第十二輯・三國到隋唐篇",
+   "cover": "img/books/vol12.jpg",
+   "eps": [
+    45,
+    48
+   ],
+   "pubu": "https://www.pubu.com.tw/ebook/709410",
+   "kobo": "https://www.kobo.com/tw/zh/search?query=%E6%88%90%E8%AA%9E%E5%8E%9F%E4%BE%86%E6%98%AF%E9%80%99%E6%A8%A3%E4%BE%86%E7%9A%84",
+   "amazon": "https://www.amazon.com/s?k=%E6%88%90%E8%AA%9E%E5%8E%9F%E4%BE%86%E6%98%AF%E9%80%99%E6%A8%A3%E4%BE%86%E7%9A%84&i=digital-text"
+  },
+  {
+   "vol": 13,
+   "title": "成語原來是這樣來的．第十三輯：孔子孟子篇",
+   "short": "第十三輯・孔子孟子篇",
+   "cover": "img/books/vol13.jpg",
+   "eps": [
+    49,
+    52
+   ],
+   "pubu": "https://www.pubu.com.tw/ebook/709411",
+   "kobo": "https://www.kobo.com/tw/zh/ebook/Qgu8LojdvzKERiGqOx9lLA",
+   "amazon": "https://www.amazon.com/s?k=%E6%88%90%E8%AA%9E%E5%8E%9F%E4%BE%86%E6%98%AF%E9%80%99%E6%A8%A3%E4%BE%86%E7%9A%84&i=digital-text"
+  },
+  {
+   "vol": 14,
+   "title": "成語原來是這樣來的．第十四輯：經典與兵法篇",
+   "short": "第十四輯・經典與兵法篇",
+   "cover": "img/books/vol14.jpg",
+   "eps": [
+    53,
+    56
+   ],
+   "pubu": "https://www.pubu.com.tw/ebook/709435",
+   "kobo": "https://www.kobo.com/tw/zh/ebook/Wj1uQo7D0jq4Hh_O47l1Zg",
+   "amazon": "https://www.amazon.com/s?k=%E6%88%90%E8%AA%9E%E5%8E%9F%E4%BE%86%E6%98%AF%E9%80%99%E6%A8%A3%E4%BE%86%E7%9A%84&i=digital-text"
+  },
+  {
+   "vol": 15,
+   "title": "成語原來是這樣來的．第十五輯：詩經與歷史人物篇",
+   "short": "第十五輯・詩經與歷史人物篇",
+   "cover": "img/books/vol15.jpg",
+   "eps": [
+    57,
+    60
+   ],
+   "pubu": "https://www.pubu.com.tw/ebook/709436",
+   "kobo": "https://www.kobo.com/tw/zh/search?query=%E6%88%90%E8%AA%9E%E5%8E%9F%E4%BE%86%E6%98%AF%E9%80%99%E6%A8%A3%E4%BE%86%E7%9A%84",
+   "amazon": "https://www.amazon.com/s?k=%E6%88%90%E8%AA%9E%E5%8E%9F%E4%BE%86%E6%98%AF%E9%80%99%E6%A8%A3%E4%BE%86%E7%9A%84&i=digital-text"
+  }
+ ]
+}
