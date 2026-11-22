@@ -127,6 +127,16 @@ footer{text-align:center;padding:26px 0 40px;opacity:.65;font-size:14px}
 .tv video{width:100%;max-height:82vh;border-radius:20px;border:4px solid #fff;background:#000;display:block}
 .tv .x{position:absolute;top:-14px;right:-14px;width:40px;height:40px;border-radius:50%;border:3px solid var(--ink);background:#fff;font-size:20px;cursor:pointer}
 .tv p{color:#fff;text-align:center;margin:10px 0 0;font-size:15px}
+/* 季節裝飾：聖誕（12/1–12/26 自動開啟，?xmas=1 可預覽） */
+.xmas .hero2 .dvid{display:none}.xmas .hero2 .mimg{display:block}
+.xmas .hero2 .bgart{object-position:50% 40%}
+.xmas .htext .lead{background:#fffffff0}
+.xmas .hello{text-shadow:0 5px 0 #b3261e,0 8px 18px #0006}
+.snow{position:absolute;inset:0;z-index:2;pointer-events:none;overflow:hidden}
+.snow i{position:absolute;top:-20px;color:#fff;font-style:normal;text-shadow:0 0 6px #fff8;animation:fall linear infinite}
+@keyframes fall{from{transform:translateY(-20px) rotate(0)}to{transform:translateY(110vh) rotate(360deg)}}
+.hero2 .bubble2{left:47%;top:26%}
+@media(max-width:820px){.hero2 .bubble2{left:auto;right:4%;top:calc(66vw - 58px);font-size:14px;padding:6px 12px}}
 </style><script>window.goatcounter={path:function(){return location.pathname||"/"}}</script><script data-goatcounter="https://chengyu.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>window.gcEvent=function(p){try{if(location.hostname.indexOf("github.io")<0)return;var f=function(){window.goatcounter&&window.goatcounter.count&&window.goatcounter.count({path:p,title:p,event:true});};window.goatcounter&&window.goatcounter.count?f():setTimeout(f,1500);}catch(e){}};
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.href,s=/pubu\.com\.tw/.test(h)?'Pubu':/kobo\.com/.test(h)?'Kobo':/amazon\./.test(h)?'Kindle':/chengyu-game/.test(h)?'遊戲':'';if(!s)return;if(s==='遊戲'){gcEvent('官網/點遊戲');return}gcEvent('點購書/'+s+'/官網');gcEvent('點購書/全部');gcEvent('點購書/官網');},true);</script>
@@ -142,8 +152,24 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   <div class="lead">這裡有好笑的<b>成語漫畫</b>、好玩的<b>闖關遊戲</b>，還有一整個<b>喵喵鎮</b>的貓咪朋友在等你！</div>
   <div class="bigbtns"><a class="bb game" href="https://yuan0520.github.io/chengyu-game/" target="_blank">🎮 去玩遊戲</a><a class="bb book" href="chengyu/">📚 看故事書</a></div>
  </div>
+  <div class="bubble2" id="say"></div>
   <div class="wave"></div>
 </div>
+<script>(function(){var d=new Date(),m=d.getMonth()+1,day=d.getDate(),q=location.search;
+var xmas=/xmas=1/.test(q)||(m===12&&day<=26&&!/xmas=0/.test(q));
+/* 每週換一句斑斑的話 */
+var L=['一三五晚上 8 點，有新的成語短片喔！','今天要闖幾關呢？喵～','看完一個成語，就多一個好朋友！','小店長在準備開店了，等等我！','你最喜歡哪個成語？告訴斑斑！'];
+var wk=Math.floor((d-new Date(2026,10,16))/6048e5);var say=document.getElementById('say');
+say.textContent=xmas?(day>=24?'聖誕快樂！':'聖誕節快到囉！')+'一起來堆雪人吧 ☃️':L[((wk%L.length)+L.length)%L.length];
+if(!xmas)return;document.documentElement.classList.add('xmas');
+var v=document.querySelector('.hero2 .dvid'),im=document.querySelector('.hero2 .mimg'),A='下雪的喵喵鎮，斑斑戴聖誕帽和朋友們在聖誕樹旁歡迎你';
+try{v.pause();v.querySelectorAll('source').forEach(function(x){x.remove()});v.poster='img/hero_xmas.jpg';v.load()}catch(e){}
+im.src='img/hero_xmas.jpg';im.alt=A;
+var sn=document.createElement('div');sn.className='snow';sn.setAttribute('aria-hidden','true');var h='';
+for(var k=0;k<36;k++){h+='<i style="left:'+(Math.random()*100).toFixed(1)+'%;font-size:'+(8+Math.random()*16).toFixed(0)+'px;opacity:'+(.5+Math.random()*.5).toFixed(2)+';animation-duration:'+(7+Math.random()*9).toFixed(1)+'s;animation-delay:-'+(Math.random()*14).toFixed(1)+'s">'+(k%3?'●':'❄')+'</i>'}
+sn.innerHTML=h;document.querySelector('.hero2').appendChild(sn);
+document.addEventListener('DOMContentLoaded',function(){var st=document.querySelector('#news .stk.r');if(st){st.src='img/sticker_xmas.webp'}});
+})();</script>
 
 <div class="w">
 <div class="board" id="board"><h2>👀 斑斑瀏覽人次看板</h2><div class="nums">
